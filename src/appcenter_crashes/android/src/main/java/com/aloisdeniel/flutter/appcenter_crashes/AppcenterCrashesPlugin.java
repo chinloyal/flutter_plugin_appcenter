@@ -12,6 +12,8 @@ import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
+import android.os.Handler;
+import android.util.Log;
 /**
  * AppcenterCrashesPlugin
  */
@@ -55,7 +57,12 @@ public class AppcenterCrashesPlugin implements MethodCallHandler {
         });
         break;
       case "generateTestCrash":
-        Crashes.generateTestCrash();
+        new Handler().postDelayed(new Runnable() {
+          @Override
+          public void run() {
+            Crashes.generateTestCrash();
+          }
+        }, 500);
         result.success(0);
         break;
       default:
