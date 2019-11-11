@@ -13,10 +13,21 @@ To use this plugin:
 1. Connect to [Visual Studio App Center Portal](https://appcenter.ms/apps)
 1. From the index page, select `Add new` and create a new **iOS application (Platform: Objective-C/Swift)**, and keep your iOS app secret (ex: `123cfac9-123b-123a-123f-123273416a48`).
 1. From the index page, select `Add new` and create a new **Android application (Platform: Java)**, and keep your Android app secret (ex: `321cfac9-123b-123a-123f-123273416a48`).
-1. Add those as [dependencies in your pubspec.yaml file](https://flutter.io/platform-plugins/):
-	* `appcenter` 
-	* `appcenter_analytics`
-	* `appcenter_crashes`
+1. Add those as dependencies in your pubspec.yaml file:
+```
+  appcenter:
+    git:
+      url: git://github.com/nhancv/flutter_plugin_appcenter.git
+      path: src/appcenter
+  appcenter_crashes:
+    git:
+      url: git://github.com/nhancv/flutter_plugin_appcenter.git
+      path: src/appcenter_crashes
+  appcenter_analytics:
+    git:
+      url: git://github.com/nhancv/flutter_plugin_appcenter.git
+      path: src/appcenter_analytics
+```
 
 ## Usage
 
